@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int n, prev1 = 0, prev2 = 1, current = 0;
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    printf("Fibonacci Series up to %d:\n", n);
+
+    // Print the first two numbers in the series
+    printf("%d, %d, ", prev1, prev2);
+
+    // Generate and print the rest of the series
+    for (int i = 2; i < n; i++) {
+        current = prev1 + prev2;
+        printf("%d, ", current);
+        prev1 = prev2;
+        prev2 = current;
+    }
+
+    // Print the last number in the series
+    current = prev1 + prev2;
+    printf("%d\n", current);
+
+    return 0;
+}
