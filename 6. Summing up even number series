@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+   int n, i, sum = 0;
+
+   printf("Enter the number of elements in the series: ");
+   scanf("%d", &n);
+
+   int series[n];
+
+   printf("Enter the series: ");
+   for (i = 0; i < n; i++) {
+      scanf("%d", &series[i]);
+   }
+
+   for (i = 0; i < n; i++) {
+      if (series[i] % 2 == 0) {
+         sum += series[i];
+      }
+   }
+
+   printf("Sum of even numbers in the series: %d", sum);
+
+   return 0;
+}
