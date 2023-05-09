@@ -1,0 +1,27 @@
+int a, b, c, temp;
+
+// initialize the values of a, b, and c
+
+a = 10;
+
+b = 20;
+
+c = 30;
+
+// swap the values of a, b, and c
+
+temp = a;
+
+a = b;
+
+b = c;
+
+c = temp;
+
+// print the swapped values of a, b, and c
+
+printf("a = %d, b = %d, c = %d", a, b, c);
+
+
+
+
