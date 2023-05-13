@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+
+    double x = 1.0;
+
+    double result = 1.0; // start with first term of the series
+
+    int i;
+
+    for (i = 1; i <= 10; i++) {
+
+        x *= -1; // alternate the sign of x for each term
+
+        result += x / factorial(i); // add the next term to the result
+
+    }
+
+    printf("e^-1 = %.8f\n", result); // print the result with 8 decimal places
+
+    return 0;
+
+}
+
+// helper function to compute the factorial of an integer
+
+int factorial(int n) {
+
+    int result = 1;
+
+    int i;
+
+    for (i = 1; i <= n; i++) {
+
+        result *= i;
+
+    }
+
+    return result;
+
+}
+
