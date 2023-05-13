@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+#include <math.h>
+
+double cos_series(double x, int n);
+
+int main() {
+
+    double x = 1.0; // example input value
+
+    int n = 10; // number of terms in the series
+
+    double cos_x = cos_series(x, n);
+
+    printf("cos(%f) = %f\n", x, cos_x);
+
+    return 0;
+
+}
+
+double cos_series(double x, int n) {
+
+    double cos_x = 1.0; // first term in the series
+
+    double term = 1.0;
+
+    int sign = -1;
+
+    for (int i = 2; i <= 2*n; i += 2) {
+
+        term *= x*x / ((double)i*(i-1));
+
+        sign *= -1;
+
+        cos_x += sign * term;
+
+    }
+
+    return cos_x;
+
+}
+
